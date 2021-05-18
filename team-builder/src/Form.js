@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-
-
 export default function Form(props){
     const {values, update, submit} = props
 
@@ -14,7 +12,6 @@ export default function Form(props){
         evt.preventDefault()
         submit()
     }
-    console.log(values)
     return(
         <form onSubmit={onSubmit}>
             <label> Name:
@@ -34,7 +31,7 @@ export default function Form(props){
             </select>
 
             <div className='submit'>
-                <button disabled={!values.name || !values.team || !values.role}>submit</button>
+                <button disabled={!values.name || !values.role || !values.team}>submit</button>
             </div>
         </form>
     )
